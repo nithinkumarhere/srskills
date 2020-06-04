@@ -1,0 +1,352 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "sanction rules",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "CountryRestrictions",
+          "slots": [
+            {
+              "name": "country",
+              "type": "AMAZON.Country"
+            }
+          ],
+          "samples": [
+            "i want to know whether i can send goods or exports to {country} ",
+            "i am thinking to do business in {country} is it safe",
+            "is it safe to export to {country}",
+            "is it safe to send my goods to {country}",
+            "can i do export business in {country}",
+            "can i do business in {country}",
+            "is there is any restriction for trading in {country}",
+            "is there any form of restriction on trading with {country}",
+            "what are the risk factors to sell my goods in {country}",
+            "is there any risk to trade in {country}",
+            "can i trade in {country}"
+          ]
+        },
+        {
+          "name": "ReadOut",
+          "slots": [],
+          "samples": [
+            "i like to listen please read it out",
+            "can tell me what are those",
+            "please read it to me",
+            "i okay with reading",
+            "read out",
+            "read them out",
+            "read out those"
+          ]
+        },
+        {
+          "name": "AMAZON.YesIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NoIntent",
+          "samples": []
+        },
+        {
+          "name": "SendEmail",
+          "slots": [],
+          "samples": [
+            "please send email only",
+            "email is required",
+            "just email",
+            "email will be enough",
+            "i need email",
+            "can you send  email",
+            "send email"
+          ]
+        },
+        {
+          "name": "NoBoth",
+          "slots": [],
+          "samples": [
+            "no i dont want",
+            "i just asked for information dont want further",
+            "this is enough dont need both",
+            "that\u0027s okay dont take any action",
+            "no not required",
+            "that\u0027s okay i dont want both"
+          ]
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "CompanyRestrictions",
+          "slots": [
+            {
+              "name": "country",
+              "type": "AMAZON.Country"
+            }
+          ],
+          "samples": [
+            "can you tell me the company names of {country} have sanctions",
+            "list the companies of {country} have sanctions",
+            "list the companies of country {country} have sanctions",
+            "can you tell me the company names of country {country} have sanctions",
+            "how many companies of country {country} have sanctions",
+            "any companies of country {country} have sanctions",
+            "can you list down the companies of country {country} have sanctions",
+            "list out the companies of country {country} have sanctions",
+            "what are the companies of country {country} have sanctions  ",
+            "What companies in country {country} have sanctions on them"
+          ]
+        },
+        {
+          "name": "IndividualRestrictions",
+          "slots": [
+            {
+              "name": "country",
+              "type": "AMAZON.Country"
+            }
+          ],
+          "samples": [
+            "can you tell me the individual names of {country} have sanctions",
+            "list the individuals of {country} have sanctions",
+            "list the individuals of country {country} have sanctions",
+            "can you tell me the individual names of country {country} have sanctions",
+            "how many individuals of country {country} have sanctions",
+            "any individuals of country {country} have sanctions",
+            "can you list down the individuals of country {country} have sanctions",
+            "list out the individuals of country {country} have sanctions",
+            "what are the individuals of country {country} have sanctions",
+            "What individuals in country {country} have sanctions on them"
+          ]
+        },
+        {
+          "name": "ExportLicense",
+          "slots": [
+            {
+              "name": "country",
+              "type": "AMAZON.Country"
+            }
+          ],
+          "samples": [
+            "Do I need export license to sell my goods to {country}"
+          ]
+        }
+      ],
+      "types": [],
+      "modelConfiguration": {
+        "fallbackIntentSensitivity": {
+          "level": "LOW"
+        }
+      }
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "CountryRestrictions",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "country",
+              "type": "AMAZON.Country",
+              "elicitationRequired": true,
+              "confirmationRequired": true,
+              "prompts": {
+                "confirmation": "Confirm.Slot.988287058732.76703503349",
+                "elicitation": "Elicit.Slot.988287058732.76703503349"
+              }
+            }
+          ]
+        },
+        {
+          "name": "ReadOut",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": []
+        },
+        {
+          "name": "IndividualRestrictions",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "country",
+              "type": "AMAZON.Country",
+              "elicitationRequired": true,
+              "confirmationRequired": true,
+              "prompts": {
+                "confirmation": "Confirm.Slot.615926706279.1516177750771",
+                "elicitation": "Elicit.Slot.615926706279.1516177750771"
+              }
+            }
+          ]
+        },
+        {
+          "name": "ExportLicense",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "country",
+              "type": "AMAZON.Country",
+              "elicitationRequired": true,
+              "confirmationRequired": true,
+              "prompts": {
+                "confirmation": "Confirm.Slot.896339680149.159450122431",
+                "elicitation": "Elicit.Slot.896339680149.159450122431"
+              }
+            }
+          ]
+        },
+        {
+          "name": "CompanyRestrictions",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "country",
+              "type": "AMAZON.Country",
+              "elicitationRequired": true,
+              "confirmationRequired": true,
+              "prompts": {
+                "confirmation": "Confirm.Slot.289225731640.632838574783",
+                "elicitation": "Elicit.Slot.289225731640.632838574783"
+              }
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Confirm.Intent.1275211468137",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "you are looking for {country} is that correct?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.988287058732.76703503349",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "please tell the country name"
+          },
+          {
+            "type": "PlainText",
+            "value": "what is the country you want to look at"
+          },
+          {
+            "type": "PlainText",
+            "value": "can you say which country you want to look for"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.988287058732.76703503349",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "you are looking for {country} is that correct?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.896339680149.159450122431",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "can you say which country you want to look for"
+          },
+          {
+            "type": "PlainText",
+            "value": "what is the country you want to look at"
+          },
+          {
+            "type": "PlainText",
+            "value": "please tell the country name"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.896339680149.159450122431",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "you are looking for {country} is that correct?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.615926706279.1516177750771",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "can you say which country you want to look for"
+          },
+          {
+            "type": "PlainText",
+            "value": "what is the country you want to look at"
+          },
+          {
+            "type": "PlainText",
+            "value": "please tell the country name"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.615926706279.1516177750771",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "you are looking for {country} is that correct?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.289225731640.632838574783",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "can you say which country you want to look for"
+          },
+          {
+            "type": "PlainText",
+            "value": "what is the country you want to look at"
+          },
+          {
+            "type": "PlainText",
+            "value": "please tell the country name"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.289225731640.632838574783",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "you are looking for {country} is that correct?"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "9"
+}
